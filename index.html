@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Car Showroom</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#111;
+    color:#fff;
+}
+
+header{
+    background:#000;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+
+header h1{
+    color:gold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:#222;
+}
+
+.hero h2{
+    font-size:45px;
+    color:gold;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+button{
+    padding:12px 30px;
+    background:gold;
+    border:none;
+    cursor:pointer;
+    font-size:18px;
+    border-radius:5px;
+}
+
+section{
+    padding:40px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:gold;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#222;
+    border:1px solid #444;
+    padding:20px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:gold;
+}
+
+.card h3{
+    color:gold;
+    margin-bottom:10px;
+}
+
+.card p{
+    margin:8px 0;
+}
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>Luxury Car Showroom</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#lambo">Lamborghini</a>
+<a href="#mercedes">Mercedes</a>
+<a href="#bugatti">Bugatti</a>
+</nav>
+
+</header>
+
+<div class="hero">
+<h2>Welcome to the Luxury Car Collection</h2>
+<p>Explore the world's finest Lamborghini, Mercedes-Benz, and Bugatti models.</p>
+<button>Explore Now</button>
+</div>
+
+<!-- Lamborghini -->
+<section id="lambo">
+<h2>Lamborghini Collection</h2>
+
+<div class="container">
+
+<div class="card"><h3>Aventador SVJ</h3><p>HP: 770</p><p>Top Speed: 350 km/h</p><p>Price: $520,000</p></div>
+
+<div class="card"><h3>Huracan STO</h3><p>HP: 631</p><p>Top Speed: 310 km/h</p><p>Price: $330,000</p></div>
+
+<div class="card"><h3>Revuelto</h3><p>HP: 1001</p><p>Top Speed: 350 km/h</p><p>Price: $600,000</p></div>
+
+<div class="card"><h3>Temerario</h3><p>HP: 907</p><p>Top Speed: 343 km/h</p><p>Price: $450,000</p></div>
+
+<div class="card"><h3>Urus Performante</h3><p>HP: 657</p><p>Top Speed: 306 km/h</p><p>Price: $270,000</p></div>
+
+<div class="card"><h3>Sian FKP 37</h3><p>HP: 819</p><p>Top Speed: 350 km/h</p><p>Price: $3.6M</p></div>
+
+<div class="card"><h3>Countach LPI 800-4</h3><p>HP: 803</p><p>Top Speed: 355 km/h</p><p>Price: $2.6M</p></div>
+
+<div class="card"><h3>Essenza SCV12</h3><p>HP: 830</p><p>Top Speed: 350 km/h</p><p>Price: $2.2M</p></div>
+
+<div class="card"><h3>Centenario</h3><p>HP: 770</p><p>Top Speed: 350 km/h</p><p>Price: $1.9M</p></div>
+
+<div class="card"><h3>Veneno</h3><p>HP: 740</p><p>Top Speed: 355 km/h</p><p>Price: $4.5M</p></div>
+
+</div>
+</section>
+
+<!-- Mercedes -->
+<section id="mercedes">
+<h2>Mercedes-Benz Collection</h2>
+
+<div class="container">
+
+<div class="card"><h3>AMG One</h3><p>HP: 1063</p><p>Top Speed: 352 km/h</p><p>Price: $2.7M</p></div>
+
+<div class="card"><h3>AMG GT Black Series</h3><p>HP: 720</p><p>Top Speed: 325 km/h</p><p>Price: $350,000</p></div>
+
+<div class="card"><h3>G63 AMG</h3><p>HP: 577</p><p>Top Speed: 240 km/h</p><p>Price: $190,000</p></div>
+
+<div class="card"><h3>S-Class</h3><p>HP: 496</p><p>Top Speed: 250 km/h</p><p>Price: $130,000</p></div>
+
+<div class="card"><h3>Maybach S680</h3><p>HP: 621</p><p>Top Speed: 250 km/h</p><p>Price: $240,000</p></div>
+
+<div class="card"><h3>C-Class AMG</h3><p>HP: 671</p><p>Top Speed: 280 km/h</p><p>Price: $95,000</p></div>
+
+<div class="card"><h3>E-Class</h3><p>HP: 429</p><p>Top Speed: 250 km/h</p><p>Price: $75,000</p></div>
+
+<div class="card"><h3>CLS 53 AMG</h3><p>HP: 429</p><p>Top Speed: 250 km/h</p><p>Price: $85,000</p></div>
+
+<div class="card"><h3>EQS 580</h3><p>HP: 516</p><p>Top Speed: 210 km/h</p><p>Price: $130,000</p></div>
+
+<div class="card"><h3>SL 63 AMG</h3><p>HP: 577</p><p>Top Speed: 315 km/h</p><p>Price: $180,000</p></div>
+
+</div>
+</section>
+
+<!-- Bugatti -->
+<section id="bugatti">
+<h2>Bugatti Collection</h2>
+
+<div class="container">
+
+<div class="card"><h3>Chiron</h3><p>HP: 1500</p><p>Top Speed: 420 km/h</p><p>Price: $3M</p></div>
+
+<div class="card"><h3>Chiron Super Sport</h3><p>HP: 1600</p><p>Top Speed: 440 km/h</p><p>Price: $3.9M</p></div>
+
+<div class="card"><h3>Bolide</h3><p>HP: 1578</p><p>Top Speed: 500+ km/h</p><p>Price: $4.7M</p></div>
+
+<div class="card"><h3>Divo</h3><p>HP: 1500</p><p>Top Speed: 380 km/h</p><p>Price: $5.8M</p></div>
+
+<div class="card"><h3>Mistral</h3><p>HP: 1600</p><p>Top Speed: 420 km/h</p><p>Price: $5M</p></div>
+
+<div class="card"><h3>Centodieci</h3><p>HP: 1600</p><p>Top Speed: 380 km/h</p><p>Price: $9M</p></div>
+
+<div class="card"><h3>Tourbillon</h3><p>HP: 1800</p><p>Top Speed: 445 km/h</p><p>Price: $4.5M</p></div>
+
+<div class="card"><h3>Veyron</h3><p>HP: 1001</p><p>Top Speed: 407 km/h</p><p>Price: $1.7M</p></div>
+
+<div class="card"><h3>Veyron Super Sport</h3><p>HP: 1200</p><p>Top Speed: 431 km/h</p><p>Price: $2.5M</p></div>
+
+<div class="card"><h3>La Voiture Noire</h3><p>HP: 1500</p><p>Top Speed: 420 km/h</p><p>Price: $18M</p></div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Luxury Car Showroom | Lamborghini | Mercedes-Benz | Bugatti</p>
+</footer>
+
+</body>
+</html>
