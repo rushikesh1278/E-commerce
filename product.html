@@ -1,350 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple E-Commerce</title>
-    
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f3f4f6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Car Product Page</title>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-dark);
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-        /* Navigation */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+body{
+    background:#111;
+    color:#fff;
+}
 
-        .navbar .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
+header{
+    background:#000;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        .navbar nav a {
-            margin-left: 1.5rem;
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:gold;
+}
 
-        .navbar nav a:hover {
-            color: var(--primary-color);
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
 
-        /* Layout */
-        .page-section {
-            padding: 4rem 5%;
-            border-bottom: 1px solid #e5e7eb;
-        }
+nav a:hover{
+    color:gold;
+}
 
-        /* Buttons */
-        .btn-primary, .btn-secondary {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: opacity 0.2s;
-        }
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px;
+    background:#222;
+    flex-wrap:wrap;
+}
 
-        .btn-primary:hover, .btn-secondary:hover {
-            opacity: 0.9;
-        }
+.details{
+    max-width:600px;
+}
 
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-        }
+.details h1{
+    font-size:50px;
+    color:gold;
+}
 
-        .btn-secondary {
-            background: var(--bg-light);
-            color: var(--text-dark);
-        }
+.details h2{
+    margin:15px 0;
+    color:#00ff99;
+}
 
-        .btn-block {
-            width: 100%;
-            margin-top: 1.5rem;
-            font-size: 1.1rem;
-        }
+.details p{
+    margin:15px 0;
+    line-height:1.7;
+}
 
-        /* Home Page */
-        .hero {
-            text-align: center;
-            padding: 5rem 2rem;
-            background: var(--bg-light);
-            border-radius: 8px;
-            margin-bottom: 3rem;
-        }
+button{
+    padding:12px 25px;
+    margin-right:10px;
+    margin-top:15px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:16px;
+}
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+.buy{
+    background:gold;
+}
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
+.drive{
+    background:#00cc66;
+    color:white;
+}
 
-        .product-card {
-            border: 1px solid #e5e7eb;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            transition: box-shadow 0.2s;
-        }
+.placeholder{
+    width:350px;
+    height:220px;
+    border:3px dashed gold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    color:gold;
+}
 
-        .product-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
+section{
+    padding:50px;
+}
 
-        .placeholder-img {
-            background: #e5e7eb;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 6px;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
+h2{
+    text-align:center;
+    color:gold;
+    margin-bottom:30px;
+}
 
-        /* Product Page */
-        .product-container {
-            display: flex;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+table{
+    width:100%;
+    border-collapse:collapse;
+}
 
-        .product-container > div {
-            flex: 1;
-        }
+table th,table td{
+    border:1px solid #444;
+    padding:15px;
+    text-align:left;
+}
 
-        .placeholder-img.large {
-            height: 400px;
-        }
+table th{
+    background:#222;
+}
 
-        .product-details h2 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
 
-        .price {
-            font-size: 1.75rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-        }
+.card{
+    background:#222;
+    padding:20px;
+    border-radius:10px;
+}
 
-        .description {
-            line-height: 1.6;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-        }
+.card h3{
+    color:gold;
+    margin-bottom:10px;
+}
 
-        /* Checkout Page */
-        .checkout-container {
-            max-width: 500px;
-            margin: 0 auto;
-            background: white;
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border: 1px solid #f3f4f6;
-        }
+.colors{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
 
-        .checkout-container h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+.color{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:2px solid white;
+}
 
-        .form-group {
-            margin-bottom: 1.25rem;
-        }
+.black{background:black;}
+.red{background:red;}
+.blue{background:blue;}
+.white{background:white;}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
+.review{
+    background:#222;
+    margin:15px 0;
+    padding:20px;
+    border-radius:10px;
+}
 
-        .form-row {
-            display: flex;
-            gap: 1rem;
-        }
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+}
+</style>
 
-        .form-row .form-group {
-            flex: 1;
-        }
-
-        input {
-            width: 100%;
-            padding: 0.85rem;
-            border: 1px solid #d1d5db;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 1rem;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        .success-message {
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .product-container {
-                flex-direction: column;
-                gap: 2rem;
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">ShopNest</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#product">Shop</a>
-            <a href="#checkout">Checkout</a>
-        </nav>
-    </header>
+<header>
 
-    <main>
-        <section id="home" class="page-section">
-            <div class="hero">
-                <h1>Welcome to ShopNest</h1>
-                <p>Discover our latest tech gadgets and accessories.</p>
-                <button class="btn-primary" onclick="document.getElementById('product').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
-            </div>
-            
-            <h2>Featured Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="placeholder-img">Headphones Image</div>
-                    <h3>Wireless Headphones</h3>
-                    <p>$99.99</p>
-                    <button class="btn-secondary" onclick="document.getElementById('product').scrollIntoView({behavior: 'smooth'})">View Product</button>
-                </div>
-                <div class="product-card">
-                    <div class="placeholder-img">Smart Watch Image</div>
-                    <h3>Smart Watch</h3>
-                    <p>$149.99</p>
-                    <button class="btn-secondary" onclick="document.getElementById('product').scrollIntoView({behavior: 'smooth'})">View Product</button>
-                </div>
-            </div>
-        </section>
+<div class="logo">Luxury Cars</div>
 
-        <section id="product" class="page-section">
-            <div class="product-container">
-                <div class="product-image">
-                    <div class="placeholder-img large">High-Res Product Image</div>
-                </div>
-                <div class="product-details">
-                    <h2>Premium Wireless Headphones</h2>
-                    <p class="price">$99.99</p>
-                    <p class="description">Experience crystal clear audio with our top-of-the-line noise-canceling wireless headphones. Includes a 24-hour battery life, ergonomic over-ear design, and deep bass technology for the ultimate listening experience.</p>
-                    <button class="btn-primary add-to-cart" onclick="document.getElementById('checkout').scrollIntoView({behavior: 'smooth'})">Buy Now</button>
-                </div>
-            </div>
-        </section>
+<nav>
+<a href="#">Home</a>
+<a href="#">Cars</a>
+<a href="#">Products</a>
+<a href="#">Contact</a>
+</nav>
 
-        <section id="checkout" class="page-section">
-            <div class="checkout-container">
-                <h2>Secure Checkout</h2>
-                <form id="payment-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" required placeholder="John Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" required placeholder="john@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="card">Credit Card Number</label>
-                        <input type="text" id="card" required placeholder="XXXX XXXX XXXX XXXX">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="expiry">Expiry (MM/YY)</label>
-                            <input type="text" id="expiry" required placeholder="12/25">
-                        </div>
-                        <div class="form-group">
-                            <label for="cvv">CVV</label>
-                            <input type="text" id="cvv" required placeholder="123">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn-primary btn-block">Pay $99.99</button>
-                </form>
-                
-                <div id="payment-message" class="hidden success-message">
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem;">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                    <h3 style="color: green; margin-top: 0;">Payment Successful!</h3>
-                    <p style="color: #6b7280;">Thank you for your order. A receipt has been sent to your email.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+</header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const paymentForm = document.getElementById('payment-form');
-            const paymentMessage = document.getElementById('payment-message');
-            const submitBtn = paymentForm.querySelector('button[type="submit"]');
+<div class="hero">
 
-            paymentForm.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevents the page from reloading
+<div class="details">
 
-                // Simulate payment processing
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = 'Processing...';
-                submitBtn.disabled = true;
-                submitBtn.style.opacity = '0.7';
+<h1>Lamborghini Revuelto</h1>
 
-                setTimeout(() => {
-                    paymentForm.classList.add('hidden');
-                    paymentMessage.classList.remove('hidden');
-                }, 2000); // 2-second delay simulation
-            });
-        });
-    </script>
+<h2>$608,000</h2>
+
+<p>
+The Lamborghini Revuelto combines a naturally aspirated V12 engine
+with hybrid technology, delivering incredible speed, luxury, and
+cutting-edge engineering.
+</p>
+
+<button class="buy">Buy Now</button>
+<button class="drive">Book Test Drive</button>
+
+</div>
+
+<div class="placeholder">
+CAR IMAGE
+</div>
+
+</div>
+
+<section>
+
+<h2>Specifications</h2>
+
+<table>
+
+<tr>
+<th>Engine</th>
+<td>6.5L V12 Hybrid</td>
+</tr>
+
+<tr>
+<th>Horsepower</th>
+<td>1001 HP</td>
+</tr>
+
+<tr>
+<th>Torque</th>
+<td>807 Nm</td>
+</tr>
+
+<tr>
+<th>Transmission</th>
+<td>8-Speed Automatic</td>
+</tr>
+
+<tr>
+<th>Top Speed</th>
+<td>350 km/h</td>
+</tr>
+
+<tr>
+<th>0-100 km/h</th>
+<td>2.5 Seconds</td>
+</tr>
+
+<tr>
+<th>Fuel Type</th>
+<td>Hybrid Petrol</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>Features</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>Powerful Engine</h3>
+<p>1001 HP hybrid V12 engine.</p>
+</div>
+
+<div class="card">
+<h3>Luxury Interior</h3>
+<p>Premium leather seats and digital cockpit.</p>
+</div>
+
+<div class="card">
+<h3>Safety</h3>
+<p>ABS, Airbags, Lane Assist, Traction Control.</p>
+</div>
+
+<div class="card">
+<h3>Technology</h3>
+<p>Touchscreen infotainment with navigation.</p>
+</div>
+
+<div class="card">
+<h3>Performance</h3>
+<p>Launch control and all-wheel drive.</p>
+</div>
+
+<div class="card">
+<h3>Warranty</h3>
+<p>3 Years Manufacturer Warranty.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Available Colors</h2>
+
+<div class="colors">
+
+<div class="color black"></div>
+
+<div class="color red"></div>
+
+<div class="color blue"></div>
+
+<div class="color white"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Customer Reviews</h2>
+
+<div class="review">
+★★★★★<br><br>
+Amazing performance and beautiful design.
+</div>
+
+<div class="review">
+★★★★★<br><br>
+Worth every dollar. The driving experience is unbelievable.
+</div>
+
+<div class="review">
+★★★★☆<br><br>
+Luxury interior with outstanding speed.
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Luxury Cars | Premium Car Collection</p>
+
+</footer>
+
 </body>
 </html>
